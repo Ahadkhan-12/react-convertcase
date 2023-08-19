@@ -12,15 +12,18 @@ export default function Textform(props) {
   const handleUpClick = () => {
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to UpperCase", "success");
   };
 
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to LowerCase", "success");
   };
 
   const handleReverse = () => {
     setText(text.split("").reverse().join(""));
+    props.showAlert("Reversed Text", "success");
   };
 
   const handleAltCase = () => {
@@ -33,12 +36,14 @@ export default function Textform(props) {
       }
     }
     setText(newText);
+    props.showAlert("Converted to Alternating Case", "success");
   };
 
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(text);
       document.getElementById("copy").innerHTML = "Copied!";
+      props.showAlert("Text Copied", "success");
     } catch (err) {
       console.error("Failed to copy: ", err);
     }
@@ -46,6 +51,7 @@ export default function Textform(props) {
 
   const handleClear = () => {
     setText("");
+    props.showAlert("Text Cleared", "success");
   };
 
   return (
