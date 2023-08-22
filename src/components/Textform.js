@@ -74,26 +74,47 @@ export default function Textform(props) {
             }}
           ></textarea>
         </div>
-        <button className="btn btn-primary mt-2 me-2" onClick={handleUpClick}>
+        <button
+          className="btn btn-primary mt-2 me-2"
+          style={{ backgroundColor: props.color }}
+          onClick={handleUpClick}
+        >
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary mt-2 me-2" onClick={handleLoClick}>
+        <button
+          className="btn btn-primary mt-2 me-2"
+          onClick={handleLoClick}
+          style={{ backgroundColor: props.color }}
+        >
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary mt-2 me-2" onClick={handleReverse}>
+        <button
+          className="btn btn-primary mt-2 me-2"
+          onClick={handleReverse}
+          style={{ backgroundColor: props.color }}
+        >
           Reverse Text
         </button>
-        <button className="btn btn-primary mt-2 me-2" onClick={handleAltCase}>
+        <button
+          className="btn btn-primary mt-2 me-2"
+          onClick={handleAltCase}
+          style={{ backgroundColor: props.color }}
+        >
           Convert to aLtErNaTiNg CaSe
         </button>
         <button
           id="copy"
           className="btn btn-primary mt-2 me-2"
           onClick={handleCopy}
+          style={{ backgroundColor: props.color }}
         >
           Copy to Clipboard
         </button>
-        <button className="btn btn-primary mt-2 me-2" onClick={handleClear}>
+        <button
+          className="btn btn-primary mt-2 me-2"
+          onClick={handleClear}
+          style={{ backgroundColor: props.color }}
+        >
           Clear
         </button>
       </div>

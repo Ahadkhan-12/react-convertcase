@@ -47,6 +47,20 @@ export default function Navbar(props) {
               Search
             </button>
           </form> */}
+
+          <div className="form-check form-switch">
+            <input
+              className="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="colorred"
+              onClick={props.changeColor}
+            />
+            <label className="form-check-label" htmlFor="colorred">
+              Red
+            </label>
+          </div>
+
           <div
             className={`form-check form-switch mx-2 text-${
               props.mode === "light" ? "dark" : "light"
