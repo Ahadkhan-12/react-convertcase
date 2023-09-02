@@ -57,6 +57,7 @@ function App() {
           <Routes>
             <Route path="/about" element={<About />}></Route>
             <Route
+              exact
               path="/"
               element={
                 <Textform

@@ -91,7 +91,7 @@ export default function About() {
           >
             <div className="accordion-body">
               <strong>React </strong>
-              <code>.accordion-body</code>, Html , CSS , Javascript , Bootstrap
+              Html , CSS , Javascript , Bootstrap
             </div>
           </div>
         </div>
