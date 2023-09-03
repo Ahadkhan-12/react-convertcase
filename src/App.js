@@ -25,7 +25,7 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#262938";
       showAlert("Dark Mode is Enabled", "success");
-      document.title = "TextUtils-Dark";
+      // document.title = "TextUtils-Dark";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
@@ -55,12 +55,13 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-4">
           <Routes>
-            <Route path="/about" element={<About />}></Route>
+            <Route path="/about" element={<About mode={mode} />}></Route>
             <Route
+              exact
               path="/"
               element={
                 <Textform
-                  heading="Enter the text to modify"
+                  heading="Try TextUtils - Word Counter , Character Counter & Convert Case"
                   mode={mode}
                   showAlert={showAlert}
                   color={color}

@@ -60,7 +60,7 @@ export default function Textform(props) {
         className="container mb-3"
         style={{ color: props.mode === "dark" ? "white" : "#262938" }}
       >
-        <h1>{props.heading}</h1>
+        <h2>{props.heading}</h2>
         <div className="mb-3">
           <textarea
             className="form-control"
@@ -69,49 +69,56 @@ export default function Textform(props) {
             id="mybox"
             rows="8"
             style={{
-              backgroundColor: props.mode === "dark" ? "#262938" : "white",
+              backgroundColor:
+                props.mode === "dark" ? "rgb(71 76 92)" : "white",
               color: props.mode === "dark" ? "white" : "#262938",
             }}
           ></textarea>
         </div>
         <button
-          className="btn btn-primary mt-2 me-2"
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2"
           style={{ backgroundColor: props.color }}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          className="btn btn-primary mt-2 me-2"
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2"
           onClick={handleLoClick}
           style={{ backgroundColor: props.color }}
         >
           Convert to Lowercase
         </button>
         <button
-          className="btn btn-primary mt-2 me-2"
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2"
           onClick={handleReverse}
           style={{ backgroundColor: props.color }}
         >
           Reverse Text
         </button>
         <button
-          className="btn btn-primary mt-2 me-2"
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2"
           onClick={handleAltCase}
           style={{ backgroundColor: props.color }}
         >
           Convert to aLtErNaTiNg CaSe
         </button>
         <button
+          disabled={text.length === 0}
           id="copy"
-          className="btn btn-primary mt-2 me-2"
+          className="btn btn-primary mx-2 my-2"
           onClick={handleCopy}
           style={{ backgroundColor: props.color }}
         >
           Copy to Clipboard
         </button>
         <button
-          className="btn btn-primary mt-2 me-2"
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-2"
           onClick={handleClear}
           style={{ backgroundColor: props.color }}
         >
@@ -127,7 +134,7 @@ export default function Textform(props) {
           {text.split(" ").filter(String).length} Words and {text.length}{" "}
           characters
         </p>
-        <p>{0.008 * text.split(" ").length} Min to read</p>
+        <p>{0.008 * text.split(" ").filter(String).length} Min to read</p>
         <h2>Preview</h2>
         <p>{text.length > 0 ? text : "Enter something to preview"}</p>
       </div>
