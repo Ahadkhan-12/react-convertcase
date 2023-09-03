@@ -25,7 +25,6 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#262938";
       showAlert("Dark Mode is Enabled", "success");
-      // document.title = "TextUtils-Dark";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
